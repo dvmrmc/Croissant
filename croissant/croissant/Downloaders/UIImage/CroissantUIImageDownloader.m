@@ -7,9 +7,9 @@
 //
 
 #import "CroissantUIImageDownloader.h"
-#import "CroissantDownloaderProtocol.h"
+#import "CroissantUIImageItem.h"
 
-@interface CroissantUIImageDownloader () <CroissantDownloaderProtocol>
+@interface CroissantUIImageDownloader ()
 
 @end
 
@@ -20,11 +20,10 @@
              completion:(CroissantUIImageDownloadBlock)completion;
 {
     CroissantUIImageItem *item = [[CroissantUIImageItem alloc] init];
-    item.managerDelegate = [CroissantUIImageDownloader sharedInstance];
     item.imageBlock = completion;
     item.downloadURL = url;
     item.cachePolicy = cachePolicy;
-    [[CroissantUIImageDownloader sharedInstance] downloadItem:item];
+    [self enqueueItem:item];
 }
 
 @end

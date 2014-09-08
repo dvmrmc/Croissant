@@ -7,6 +7,7 @@
 //
 
 #import "Croissant.h"
+#import "CroissantQueue.h"
 #import "CroissantUIImageDownloader.h"
 #import "CroissantNSDataDownloader.h"
 
@@ -14,7 +15,7 @@
 
 + (void)setMaxDownloads:(int)maxDownloads
 {
-    [CroissantNSDataDownloader setMaxDownloads:maxDownloads];
+    [CroissantQueue setMaxDownloads:maxDownloads];
 }
 
 + (void)downloadNSDDataFromURLString:(NSString*)urlString
@@ -51,6 +52,11 @@
     [CroissantUIImageDownloader downloadFromURL:url
                                     cachePolicy:cachePolicy
                                      completion:completion];
+}
+
++ (void)cancelAllDownloads
+{
+    [CroissantQueue cancelAll];
 }
 
 @end

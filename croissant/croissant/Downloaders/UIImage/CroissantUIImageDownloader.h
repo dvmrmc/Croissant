@@ -7,7 +7,6 @@
 //
 
 #import "CroissantNSDataDownloader.h"
-#import "CroissantUIImageItem.h"
 
 @interface CroissantUIImageDownloader : CroissantNSDataDownloader
 

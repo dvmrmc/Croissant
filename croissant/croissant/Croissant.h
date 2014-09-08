@@ -35,4 +35,6 @@ typedef enum
                    cachePolicy:(CroissantCachePolicy)cachePolicy
                     completion:(CroissantUIImageDownloadBlock)completion;
 
++ (void)cancelAllDownloads;
+
 @end

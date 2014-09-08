@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CroissantNSDataItem.h"
+#import "Croissant.h"
+#import "CroissantQueue.h"
 
-@interface CroissantNSDataDownloader : NSObject
-
-+ (void)setMaxDownloads:(int)maxDownloads;
+@interface CroissantNSDataDownloader : CroissantQueue
 
 + (void)downloadFromURL:(NSURL*)url
             cachePolicy:(CroissantCachePolicy)cachePolicy

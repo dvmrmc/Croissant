@@ -1,47 +1,28 @@
 //
-//  CroissantItem.m
+//  CroissantNSDataItem.m
 //  croissant
 //
 //  Created by David Martin on 07/06/14.
 //  Copyright (c) 2014 applift. All rights reserved.
 //
 
-#import "CroissantItem.h"
-#import "Croissant.h"
+#import "CroissantNSDataItem.h"
 #import "CroissantCache.h"
 
-#define dispatch_main_sync(block)\
-if ([NSThread isMainThread])\
-{\
-block();\
-}\
-else\
-{\
-dispatch_sync(dispatch_get_main_queue(), block);\
-}
+NSString * const    kCroissantItemCancelErrorString = @"DownloadCancelled";
+NSString * const    kCroissantItemBadURLErrorString = @"BadURL";
+NSString * const    kCroissantItemNoConnectionErrorString = @"NoConnection";
 
-NSString * const kCroissantItemCancelErrorString = @"DownloadCancelled";
-NSString * const kCroissantItemBadURLErrorString = @"BadURL";
-NSString * const kCroissantItemNoConnectionErrorString = @"NoConnection";
+NSInteger const     kCroissantItemDownloadTimeout = 60;
 
-NSInteger const kPASDKDownloadItemTimeout = 60;
+@interface CroissantNSDataItem ()<NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
-@interface CroissantItem ()<NSURLConnectionDataDelegate, NSURLConnectionDelegate>
-
-@property (nonatomic, copy)     CroissantNSDataDownloadBlock    block;
-@property (nonatomic, strong)   NSURL                           *downloadURL;
-@property (nonatomic, assign)   CroissantCachePolicy            cachePolicy;
-
-@property (nonatomic, strong)   NSMutableData                   *receivedData;
-@property (nonatomic, strong)   NSURLConnection                 *connection;
-
-- (void)invokeDownloadDidComplete:(NSObject*)downloadedObject;
-- (void)invokeDownloadDidFailWithString:(NSString*)errorString;
-- (void)invokeDownloadDidFailWithError:(NSError*)error;
+@property (nonatomic, strong)   NSMutableData                           *receivedData;
+@property (nonatomic, strong)   NSURLConnection                         *connection;
 
 @end
 
-@implementation CroissantItem
+@implementation CroissantNSDataItem
 
 - (void)dealloc
 {
@@ -71,7 +52,7 @@ NSInteger const kPASDKDownloadItemTimeout = 60;
     
     NSURLRequest *request = [NSURLRequest requestWithURL:self.downloadURL
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                         timeoutInterval:kPASDKDownloadItemTimeout];
+                                         timeoutInterval:kCroissantItemDownloadTimeout];
     
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     self.receivedData = [NSMutableData dataWithCapacity:0];
@@ -89,26 +70,27 @@ NSInteger const kPASDKDownloadItemTimeout = 60;
 
 - (void)cancel
 {
+    [self invalidate];
+    [self invokeDownloadDidFailWithString:kCroissantItemCancelErrorString];
+}
+
+- (void)invalidate
+{
     [self.connection cancel];
     self.connection = nil;
     self.receivedData = nil;
-    
-    [self invokeDownloadDidFailWithString:kCroissantItemCancelErrorString];
 }
 
 - (void)invokeDownloadDidComplete:(NSData*)downloadedData
 {
-    if(self.managerDelegate && [self.managerDelegate respondsToSelector:@selector(download:didComplete:)])
-    {
-        [self.managerDelegate download:self didComplete:downloadedData];
-    }
-    
     if(self.block)
     {
         dispatch_main_sync(^{
             self.block(downloadedData, nil);
         });
     }
+    
+    [CroissantQueue downloadFinishedForItem:self];
 }
 
 - (void)invokeDownloadDidFailWithString:(NSString *)errorString
@@ -124,17 +106,14 @@ NSInteger const kPASDKDownloadItemTimeout = 60;
 
 - (void)invokeDownloadDidFailWithError:(NSError *)error
 {
-    if(self.managerDelegate && [self.managerDelegate respondsToSelector:@selector(download:didFail:)])
-    {
-        [self.managerDelegate download:self didFail:error];
-    }
-    
     if(self.block)
     {
         dispatch_main_sync(^{
             self.block(nil, error);
         });
     }
+    
+    [CroissantQueue downloadFinishedForItem:self];
 }
 
 #pragma mark - DELEGATES -
