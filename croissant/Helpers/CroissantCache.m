@@ -1,9 +1,6 @@
 //
-//  PASDKImageManagerCache.m
-//  PlayAdsSDK
-//
-//  Created by David Martin on 15/05/14.
-//  Copyright (c) 2014 AppLift. All rights reserved.
+//  CroissantCache.m
+//  Created by Csongor Nagy on 15/05/14.
 //
 
 #import "CroissantCache.h"

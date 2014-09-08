@@ -1,9 +1,6 @@
 //
-//  PASDKImageManager.h
-//  PlayAdsSDK
-//
+//  CroissantNSDataDownloader.h
 //  Created by David Martin on 15/05/14.
-//  Copyright (c) 2014 AppLift. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

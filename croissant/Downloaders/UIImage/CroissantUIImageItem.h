@@ -1,9 +1,6 @@
 //
-//  PASDKDownloadManagerImageItem.h
-//  PlayAdsSDK
-//
-//  Created by David Martin on 16/05/14.
-//  Copyright (c) 2014 AppLift. All rights reserved.
+//  CroissantUIImageItem.h
+//  Created by David Martin on 15/05/14.
 //
 
 #import "CroissantNSDataItem.h"

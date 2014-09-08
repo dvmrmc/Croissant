@@ -2,7 +2,7 @@
 This library is a simple queued downloader written in Objective-C and released under MIT License, so feel free to use and PullRequest any bug fix or new behaviour added.
 
 ## Install
-Download or clone the project master branch and include everything under "croissant/croissant" folder into your project.
+Download the source code, clone it or submodule it. Everything you need is under "Croissant" folder. Drag & Drop it to your project to start working with this tasty code.
 
 ## Usage
 This library provides 2 basic types download. This creates a queue to avoid performance issues when downloading too many resources at the same time. 

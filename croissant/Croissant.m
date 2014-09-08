@@ -1,9 +1,6 @@
 //
 //  Croissant.m
-//  croissant
-//
-//  Created by David Martin on 07/06/14.
-//  Copyright (c) 2014 applift. All rights reserved.
+//  Created by David Martin on 15/05/14.
 //
 
 #import "Croissant.h"
