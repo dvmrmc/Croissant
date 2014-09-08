@@ -7,7 +7,6 @@
 //
 
 #import "CroissantUIImageItem.h"
-#import "CroissantCache.h"
 
 NSString * const kCroissantImageErrorString    = @"ImageTypeNotSupported";
 
@@ -54,9 +53,9 @@ NSString * const kCroissantImageErrorString    = @"ImageTypeNotSupported";
     return nil;
 }
 
-- (void)invokeDownloadDidFail:(NSError *)error
+- (void)invokeDownloadDidFailWithError:(NSError *)error
 {
-    [super invokeDownloadDidFail:error];
+    [super invokeDownloadDidFailWithError:error];
     
     if(self.imageBlock)
     {
@@ -72,11 +71,7 @@ NSString * const kCroissantImageErrorString    = @"ImageTypeNotSupported";
     if ([imageContentType isEqualToString:@"image/gif"] ||
         [imageContentType isEqualToString:@"image/webp"])
     {
-        NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-        [userInfo setValue:kCroissantImageErrorString forKey:NSLocalizedDescriptionKey];
-        NSError *error = [NSError errorWithDomain:kCroissantImageErrorString code:0 userInfo:userInfo];
-        
-        [self invokeDownloadDidFail:error];
+        [self invokeDownloadDidFailWithString:kCroissantImageErrorString];
     }
     else
     {

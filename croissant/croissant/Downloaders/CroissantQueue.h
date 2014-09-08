@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CroissantItem.h"
+
+@protocol CroissantQueueItem <NSObject>
+
+- (void)start;
+- (void)cancel;
+- (void)invalidate;
+
+@end
 
 @interface CroissantQueue : NSObject
 
 + (void)setMaxDownloads:(int)maxDownloads;
-+ (void)enqueueItem:(CroissantItem*)item;
++ (void)enqueueItem:(NSObject<CroissantQueueItem>*)item;
++ (void)downloadFinishedForItem:(NSObject<CroissantQueueItem> *)item;
++ (void)cancelAll;
 
 @end
