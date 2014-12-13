@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D53E35FE1A3C479200252F88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E35FD1A3C479200252F88 /* main.m */; };
+		D53E36011A3C479200252F88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36001A3C479200252F88 /* AppDelegate.m */; };
+		D53E36041A3C479200252F88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36031A3C479200252F88 /* ViewController.m */; };
+		D53E36071A3C479200252F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53E36051A3C479200252F88 /* Main.storyboard */; };
+		D53E36091A3C479200252F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53E36081A3C479200252F88 /* Images.xcassets */; };
+		D53E360C1A3C479200252F88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D53E360A1A3C479200252F88 /* LaunchScreen.xib */; };
+		D53E36181A3C479200252F88 /* CroissantDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36171A3C479200252F88 /* CroissantDemoTests.m */; };
+		D53E36341A3C482200252F88 /* Croissant.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36231A3C482200252F88 /* Croissant.m */; };
+		D53E36351A3C482200252F88 /* CroissantQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36261A3C482200252F88 /* CroissantQueue.m */; };
+		D53E36361A3C482200252F88 /* CroissantNSDataDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36291A3C482200252F88 /* CroissantNSDataDownloader.m */; };
+		D53E36371A3C482200252F88 /* CroissantNSDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E362B1A3C482200252F88 /* CroissantNSDataItem.m */; };
+		D53E36381A3C482200252F88 /* CroissantUIImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E362E1A3C482200252F88 /* CroissantUIImageDownloader.m */; };
+		D53E36391A3C482200252F88 /* CroissantUIImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36301A3C482200252F88 /* CroissantUIImageItem.m */; };
+		D53E363A1A3C482200252F88 /* CroissantCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D53E36331A3C482200252F88 /* CroissantCache.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D53E36121A3C479200252F88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D53E35F01A3C479200252F88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D53E35F71A3C479200252F88;
+			remoteInfo = CroissantDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D53E35F81A3C479200252F88 /* CroissantDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CroissantDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53E35FC1A3C479200252F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53E35FD1A3C479200252F88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D53E35FF1A3C479200252F88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D53E36001A3C479200252F88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D53E36021A3C479200252F88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D53E36031A3C479200252F88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D53E36061A3C479200252F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D53E36081A3C479200252F88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D53E360B1A3C479200252F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D53E36111A3C479200252F88 /* CroissantDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CroissantDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53E36161A3C479200252F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53E36171A3C479200252F88 /* CroissantDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CroissantDemoTests.m; sourceTree = "<group>"; };
+		D53E36221A3C482200252F88 /* Croissant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Croissant.h; sourceTree = "<group>"; };
+		D53E36231A3C482200252F88 /* Croissant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Croissant.m; sourceTree = "<group>"; };
+		D53E36251A3C482200252F88 /* CroissantQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroissantQueue.h; sourceTree = "<group>"; };
+		D53E36261A3C482200252F88 /* CroissantQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroissantQueue.m; sourceTree = "<group>"; };
+		D53E36281A3C482200252F88 /* CroissantNSDataDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroissantNSDataDownloader.h; sourceTree = "<group>"; };
+		D53E36291A3C482200252F88 /* CroissantNSDataDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroissantNSDataDownloader.m; sourceTree = "<group>"; };
+		D53E362A1A3C482200252F88 /* CroissantNSDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroissantNSDataItem.h; sourceTree = "<group>"; };
+		D53E362B1A3C482200252F88 /* CroissantNSDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroissantNSDataItem.m; sourceTree = "<group>"; };
+		D53E362D1A3C482200252F88 /* CroissantUIImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroissantUIImageDownloader.h; sourceTree = "<group>"; };
+		D53E362E1A3C482200252F88 /* CroissantUIImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroissantUIImageDownloader.m; sourceTree = "<group>"; };
+		D53E362F1A3C482200252F88 /* CroissantUIImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroissantUIImageItem.h; sourceTree = "<group>"; };
+		D53E36301A3C482200252F88 /* CroissantUIImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroissantUIImageItem.m; sourceTree = "<group>"; };
+		D53E36321A3C482200252F88 /* CroissantCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroissantCache.h; sourceTree = "<group>"; };
+		D53E36331A3C482200252F88 /* CroissantCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroissantCache.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D53E35F51A3C479200252F88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53E360E1A3C479200252F88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D53E35EF1A3C479200252F88 = {
+			isa = PBXGroup;
+			children = (
+				D53E35FA1A3C479200252F88 /* CroissantDemo */,
+				D53E36141A3C479200252F88 /* CroissantDemoTests */,
+				D53E35F91A3C479200252F88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D53E35F91A3C479200252F88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D53E35F81A3C479200252F88 /* CroissantDemo.app */,
+				D53E36111A3C479200252F88 /* CroissantDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D53E35FA1A3C479200252F88 /* CroissantDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D53E36211A3C482200252F88 /* Croissant */,
+				D53E35FF1A3C479200252F88 /* AppDelegate.h */,
+				D53E36001A3C479200252F88 /* AppDelegate.m */,
+				D53E36021A3C479200252F88 /* ViewController.h */,
+				D53E36031A3C479200252F88 /* ViewController.m */,
+				D53E36051A3C479200252F88 /* Main.storyboard */,
+				D53E36081A3C479200252F88 /* Images.xcassets */,
+				D53E360A1A3C479200252F88 /* LaunchScreen.xib */,
+				D53E35FB1A3C479200252F88 /* Supporting Files */,
+			);
+			path = CroissantDemo;
+			sourceTree = "<group>";
+		};
+		D53E35FB1A3C479200252F88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D53E35FC1A3C479200252F88 /* Info.plist */,
+				D53E35FD1A3C479200252F88 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D53E36141A3C479200252F88 /* CroissantDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D53E36171A3C479200252F88 /* CroissantDemoTests.m */,
+				D53E36151A3C479200252F88 /* Supporting Files */,
+			);
+			path = CroissantDemoTests;
+			sourceTree = "<group>";
+		};
+		D53E36151A3C479200252F88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D53E36161A3C479200252F88 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D53E36211A3C482200252F88 /* Croissant */ = {
+			isa = PBXGroup;
+			children = (
+				D53E36221A3C482200252F88 /* Croissant.h */,
+				D53E36231A3C482200252F88 /* Croissant.m */,
+				D53E36241A3C482200252F88 /* Downloaders */,
+				D53E36311A3C482200252F88 /* Helpers */,
+			);
+			name = Croissant;
+			path = ../../Croissant;
+			sourceTree = "<group>";
+		};
+		D53E36241A3C482200252F88 /* Downloaders */ = {
+			isa = PBXGroup;
+			children = (
+				D53E36251A3C482200252F88 /* CroissantQueue.h */,
+				D53E36261A3C482200252F88 /* CroissantQueue.m */,
+				D53E36271A3C482200252F88 /* NSData */,
+				D53E362C1A3C482200252F88 /* UIImage */,
+			);
+			path = Downloaders;
+			sourceTree = "<group>";
+		};
+		D53E36271A3C482200252F88 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				D53E36281A3C482200252F88 /* CroissantNSDataDownloader.h */,
+				D53E36291A3C482200252F88 /* CroissantNSDataDownloader.m */,
+				D53E362A1A3C482200252F88 /* CroissantNSDataItem.h */,
+				D53E362B1A3C482200252F88 /* CroissantNSDataItem.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		D53E362C1A3C482200252F88 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				D53E362D1A3C482200252F88 /* CroissantUIImageDownloader.h */,
+				D53E362E1A3C482200252F88 /* CroissantUIImageDownloader.m */,
+				D53E362F1A3C482200252F88 /* CroissantUIImageItem.h */,
+				D53E36301A3C482200252F88 /* CroissantUIImageItem.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		D53E36311A3C482200252F88 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D53E36321A3C482200252F88 /* CroissantCache.h */,
+				D53E36331A3C482200252F88 /* CroissantCache.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D53E35F71A3C479200252F88 /* CroissantDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D53E361B1A3C479200252F88 /* Build configuration list for PBXNativeTarget "CroissantDemo" */;
+			buildPhases = (
+				D53E35F41A3C479200252F88 /* Sources */,
+				D53E35F51A3C479200252F88 /* Frameworks */,
+				D53E35F61A3C479200252F88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CroissantDemo;
+			productName = CroissantDemo;
+			productReference = D53E35F81A3C479200252F88 /* CroissantDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D53E36101A3C479200252F88 /* CroissantDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D53E361E1A3C479200252F88 /* Build configuration list for PBXNativeTarget "CroissantDemoTests" */;
+			buildPhases = (
+				D53E360D1A3C479200252F88 /* Sources */,
+				D53E360E1A3C479200252F88 /* Frameworks */,
+				D53E360F1A3C479200252F88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D53E36131A3C479200252F88 /* PBXTargetDependency */,
+			);
+			name = CroissantDemoTests;
+			productName = CroissantDemoTests;
+			productReference = D53E36111A3C479200252F88 /* CroissantDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D53E35F01A3C479200252F88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = cerberillo;
+				TargetAttributes = {
+					D53E35F71A3C479200252F88 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					D53E36101A3C479200252F88 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = D53E35F71A3C479200252F88;
+					};
+				};
+			};
+			buildConfigurationList = D53E35F31A3C479200252F88 /* Build configuration list for PBXProject "CroissantDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D53E35EF1A3C479200252F88;
+			productRefGroup = D53E35F91A3C479200252F88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D53E35F71A3C479200252F88 /* CroissantDemo */,
+				D53E36101A3C479200252F88 /* CroissantDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D53E35F61A3C479200252F88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53E36071A3C479200252F88 /* Main.storyboard in Resources */,
+				D53E360C1A3C479200252F88 /* LaunchScreen.xib in Resources */,
+				D53E36091A3C479200252F88 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53E360F1A3C479200252F88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D53E35F41A3C479200252F88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53E36341A3C482200252F88 /* Croissant.m in Sources */,
+				D53E36351A3C482200252F88 /* CroissantQueue.m in Sources */,
+				D53E36371A3C482200252F88 /* CroissantNSDataItem.m in Sources */,
+				D53E36041A3C479200252F88 /* ViewController.m in Sources */,
+				D53E36011A3C479200252F88 /* AppDelegate.m in Sources */,
+				D53E36381A3C482200252F88 /* CroissantUIImageDownloader.m in Sources */,
+				D53E36361A3C482200252F88 /* CroissantNSDataDownloader.m in Sources */,
+				D53E36391A3C482200252F88 /* CroissantUIImageItem.m in Sources */,
+				D53E35FE1A3C479200252F88 /* main.m in Sources */,
+				D53E363A1A3C482200252F88 /* CroissantCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D53E360D1A3C479200252F88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53E36181A3C479200252F88 /* CroissantDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D53E36131A3C479200252F88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D53E35F71A3C479200252F88 /* CroissantDemo */;
+			targetProxy = D53E36121A3C479200252F88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D53E36051A3C479200252F88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D53E36061A3C479200252F88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D53E360A1A3C479200252F88 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D53E360B1A3C479200252F88 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D53E36191A3C479200252F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D53E361A1A3C479200252F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D53E361C1A3C479200252F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CroissantDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D53E361D1A3C479200252F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CroissantDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D53E361F1A3C479200252F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CroissantDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CroissantDemo.app/CroissantDemo";
+			};
+			name = Debug;
+		};
+		D53E36201A3C479200252F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CroissantDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CroissantDemo.app/CroissantDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D53E35F31A3C479200252F88 /* Build configuration list for PBXProject "CroissantDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53E36191A3C479200252F88 /* Debug */,
+				D53E361A1A3C479200252F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D53E361B1A3C479200252F88 /* Build configuration list for PBXNativeTarget "CroissantDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53E361C1A3C479200252F88 /* Debug */,
+				D53E361D1A3C479200252F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D53E361E1A3C479200252F88 /* Build configuration list for PBXNativeTarget "CroissantDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D53E361F1A3C479200252F88 /* Debug */,
+				D53E36201A3C479200252F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D53E35F01A3C479200252F88 /* Project object */;
+}

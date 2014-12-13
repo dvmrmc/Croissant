@@ -1,0 +1,5 @@
+language: objective-c
+xcode_workspace: Croissant.xcworkspace
+xcode_scheme: CroissantDemo
+notifications:
+  slack: evacode:t31l2r9quNIZzVGPu58SPYvT

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = "Croissant"
-s.version = "0.0.1"
+s.version = "0.1.0"
 s.summary = "A simple queued downloader."
 s.description = <<-DESC
 This library is a simple queued downloader written in Objective-C and released under MIT License.
@@ -12,6 +12,6 @@ s.platform = :ios
 s.platform = :ios, "6.1"
 s.source = { :git => "https://github.com/cerberillo/Croissant.git", :tag => s.version.to_s }
 s.framework = "Foundation"
-s.source_files = "croissant/**/*.{h,m}"
+s.source_files = "Croissant/**/*.{h,m}"
 s.requires_arc = true
 end
